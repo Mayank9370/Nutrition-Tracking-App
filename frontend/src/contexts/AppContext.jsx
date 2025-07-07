@@ -20,7 +20,7 @@ export const AppProvider = ({ children }) => {
 
 useEffect(() => {
   if (user) {
-    const newSocket = io(import.meta.env.VITE_BACKEND_URL);
+    const newSocket = io('https://nutrition-tracking-app-backend.onrender.com');
     setSocket(newSocket);
 
     newSocket.on('connect', () => {
